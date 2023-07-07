@@ -71,6 +71,9 @@ apt update -y
 echo "${UBlack}${On_Green}Installing apt https transport${Color_Off}"
 apt install -y software-properties-common apt-transport-https
 #
+echo "${UBlack}${On_Green}Installing Apache 2${Color_Off}"
+sudo apt install -y apache2 apache2-bin apache2-data apache2-dev apache2-ssl-dev apache2-utils
+#
 echo "${UBlack}${On_Green}Installing PHP 7.4 PPA${Color_Off}"
 add-apt-repository ppa:ondrej/php -y
 #
@@ -80,9 +83,6 @@ apt upgrade -y
 #
 echo "${UBlack}${On_Green}Installing PHP 7.4${Color_Off}"
 apt install -y php7.4-amqp php7.4-apcu php7.4-bcmath php7.4-bz2  php7.4-cgi  php7.4-cli  php7.4-common  php7.4-curl  php7.4-dba  php7.4-decimal  php7.4-dev  php7.4-ds  php7.4-enchant  php7.4-excimer  php7.4-facedetect  php7.4-fpm  php7.4-gd  php7.4-gearman  php7.4-geoip  php7.4-gmp  php7.4-gnupg  php7.4-grpc  php7.4-http  php7.4-imagick  php7.4-imap  php7.4-inotify  php7.4-interbase  php7.4-intl  php7.4-json  php7.4-ldap  php7.4-libvirt-php  php7.4-lua  php7.4-lz4  php7.4-mailparse  php7.4-maxminddb  php7.4-mbstring  php7.4-mcrypt  php7.4-memcache  php7.4-mongodb  php7.4-msgpack  php7.4-mysql  php7.4-oauth  php7.4-odbc  php7.4-opcache  php7.4-pcov  php7.4-pgsql  php7.4-phpdbg  php7.4-pinba  php7.4-propro  php7.4-protobuf  php7.4-ps  php7.4-pspell  php7.4-psr  php7.4-radius  php7.4-raphf  php7.4-rdkafka  php7.4-redis  php7.4-rrd  php7.4-snmp  php7.4-soap  php7.4-sqlite3  php7.4-ssh2  php7.4-stomp  php7.4-swoole  php7.4-sybase  php7.4-tideways  php7.4-tidy  php7.4-uopz  php7.4-uploadprogress  php7.4-uuid  php7.4-vips  php7.4-xdebug  php7.4-xml  php7.4-xmlrpc  php7.4-xsl  php7.4-yaml  php7.4-zip  php7.4-zmq  php7.4-zstd
-#
-echo "${UBlack}${On_Green}Installing Apache 2${Color_Off}"
-sudo apt install -y apache2 apache2-bin apache2-data apache2-dev apache2-ssl-dev apache2-utils
 #
 echo "${UBlack}${On_Green}Enabling Apache MOD SSL${Color_Off}"
 sudo a2enmod ssl
